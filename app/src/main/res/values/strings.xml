@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">gestionInvproject</string>
+    <string name="text_event_1">Text event 1</string>
+    <string name="buttonevent1">buttonEvent1</string>
 </resources>
