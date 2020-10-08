@@ -1,4 +1,4 @@
-package com.example.gestioninvproject
+package com.example.homecenterapp
 
 import org.junit.Test
 
