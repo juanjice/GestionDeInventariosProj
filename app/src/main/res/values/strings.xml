@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">gestionInvproject</string>
-    <string name="text_event_1">Text event 1</string>
-    <string name="buttonevent1">buttonEvent1</string>
+    <string name="app_name">Inventory Management</string>
+    <string name="crear_lista">Crear lista</string>
+    <string name="editar_lista">Editar lista</string>
+    <string name="ver_detalle">Ver detalle</string>
+    <string name="editar_detalle">Editar detalle</string>
+    <string name="inventory_management">Inventory Management</string>
+    <string name="logo">logo</string>
 </resources>
