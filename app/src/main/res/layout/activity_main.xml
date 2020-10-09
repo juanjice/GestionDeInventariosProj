@@ -7,7 +7,7 @@
     android:background="@color/background"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.app.homecenterapp.com.example.homecenterapp.ui.MainActivity">
+    tools:context="com.example.homecenterapp.ui.MainActivity">
 
     <fragment
         android:id="@+id/my_nav_host_fragment"

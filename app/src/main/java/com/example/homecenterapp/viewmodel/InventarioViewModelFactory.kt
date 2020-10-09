@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.homecenterapp.domain.ItemUseCase
 
 
-class MyViewModelFactory(val itemUseCase: ItemUseCase):ViewModelProvider.Factory {
+class InventarioViewModelFactory(val itemUseCase: ItemUseCase):ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return modelClass.getConstructor(ItemUseCase::class.java).newInstance(itemUseCase)

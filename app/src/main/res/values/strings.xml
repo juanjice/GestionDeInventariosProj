@@ -5,5 +5,6 @@
     <string name="ver_detalle">Ver detalle</string>
     <string name="editar_detalle">Editar detalle</string>
     <string name="inventory_management">Inventory Management</string>
+    <string name="boton_guardar">Guardar</string>
     <string name="logo">logo</string>
 </resources>
