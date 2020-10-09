@@ -21,4 +21,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/navigation_graph" />
 
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/iniciarsesiontxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/transparent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
