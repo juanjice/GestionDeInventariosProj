@@ -1,2 +1,5 @@
+include ':device'
+include ':domain'
+include ':data'
 include ':app'
 rootProject.name = "gestionInvproject"
