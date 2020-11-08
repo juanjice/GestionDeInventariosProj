@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/assets"
+        android:icon="@drawable/ic_baseline_add_business_24"
+        android:title="@string/text_assets_menu"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/text_home_menu"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/documents"
+        android:icon="@drawable/ic_baseline_folder_24"
+        android:title="@string/text_documents_menu"
+        app:showAsAction="ifRoom"/>
+
+</menu>

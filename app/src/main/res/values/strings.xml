@@ -1,22 +1,9 @@
 <resources>
     <string name="app_name">Inventory Management</string>
-    <string name="crear_lista">Crear lista</string>
-    <string name="editar_lista">Editar lista</string>
-    <string name="ver_detalle">Ver detalle</string>
-    <string name="editar_detalle">Editar detalle</string>
-    <string name="inventory_management">Inventory Management</string>
-    <string name="logo">logo</string>
-    <string name="login_text">Login</string>
-    <string name="hint_emailtxt">Email</string>
-    <string name="hint_password">Contraseña</string>
-    <string name="tittle_apptxt">Inventory Managment</string>
-    <string name="iniciarsesiontxt">Iniciar Sesión</string>
-    <string name="init_button">Iniciar Sesion</string>
-    <string name="text_create_account">¿No tienes cuenta?, ¡Registrate!</string>
-    <string name="reg_button">Registrarse</string>
-    <string name="text_already_account">¿Ya tienes cuenta?</string>
-    <string name="text_name">Nombre</string>
-    <string name="ingreso_txt">Ingreso</string>
-    <string name="registro_txt">Registro</string>
-    <string name="hint_name">Nombre</string>
+    <string name="text_home_menu">Home</string>
+    <string name="text_assets_menu">Assets</string>
+    <string name="text_documents_menu">Documents</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
