@@ -12,4 +12,12 @@
     <dimen name="big_box_width">150dp</dimen>
     <dimen name="big_box_height">116dp</dimen>
 
+    <dimen name="width_image_card">80dp</dimen>
+    <dimen name="height_image_card">100dp</dimen>
+
+
+    <dimen name="tittle_text_size">20sp</dimen>
+    <dimen name="num_card_view">15sp</dimen>
+    <dimen name="title_card_view">18sp</dimen>
+
 </resources>

@@ -25,7 +25,7 @@
 </fragment>
     <fragment
         android:id="@+id/assets"
-        android:name="com.example.gestioninvetariosapp.ui.fragments.AssetsFragment"
+        android:name="com.example.gestioninvetariosapp.ui.assets.fragment.AssetsFragment"
         android:label="Fragmento de bienes"
         />
 
