@@ -17,7 +17,7 @@
 
     <item
         android:id="@+id/documents"
-        android:icon="@drawable/ic_baseline_folder_24"
+        android:icon="@drawable/ic_baseline_book_24"
         android:title="@string/text_documents_menu"
         app:showAsAction="ifRoom"/>
 
