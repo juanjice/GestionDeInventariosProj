@@ -17,7 +17,7 @@
             android:name=".ui.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             />
-        <activity android:name=".ui.MainActivity">
+        <activity android:name="com.example.gestioninvetariosapp.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
