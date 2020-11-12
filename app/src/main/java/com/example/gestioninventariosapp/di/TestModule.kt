@@ -1,4 +1,4 @@
-package com.bsro.androidtestapp.di
+package com.example.gestioninventariosapp.di
 
 import dagger.Module
 import dagger.Provides
