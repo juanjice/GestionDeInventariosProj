@@ -7,8 +7,8 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
 import androidx.navigation.ui.setupWithNavController
-import com.example.homecenterapp.R
-import com.example.homecenterapp.R.layout.activity_main
+import com.example.gestioninventariosapp.R
+import com.example.gestioninventariosapp.R.layout.activity_main
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 
