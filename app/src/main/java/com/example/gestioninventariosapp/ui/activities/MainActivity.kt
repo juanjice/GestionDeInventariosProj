@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.assets, R.id.documents,R.id.RemoveItem,R.id.addItem ->{
                     Log.i("Homemsg","Pinchaste sobre algo")
-                    Log.i("typebot", destination.toString())
                     bottomMenu.visibility=View.VISIBLE
                 }
                 else -> bottomMenu.visibility=View.GONE

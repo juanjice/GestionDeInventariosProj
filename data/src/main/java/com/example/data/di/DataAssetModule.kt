@@ -13,6 +13,6 @@ class DataAssetModule {
     @Provides
     internal fun provideAssetsRepository(
         assetApiClient: AssetApiClient
-    ): AssetRepositoryImpl = AssetRepositoryImpl(assetApiClient)
+    ) = AssetRepositoryImpl(assetApiClient)
 
 }

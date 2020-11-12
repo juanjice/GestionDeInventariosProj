@@ -9,6 +9,6 @@ data class AssetApiEntity(
     val descripcion:String,
     val cantidad:Int
 )
-fun AssetApiEntity.mapToDomain(): Asset =
-    Asset(id,name,tipo,descripcion,cantidad)
-fun List<AssetApiEntity>.mapToDomain(): List<Asset> =map { it.mapToDomain() }
+fun AssetApiEntity.mapToDomain() =
+    Asset(id, name, tipo, descripcion, cantidad)
+fun List<AssetApiEntity>.mapToDomain() =map { it.mapToDomain() }

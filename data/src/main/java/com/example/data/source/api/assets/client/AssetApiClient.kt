@@ -5,7 +5,7 @@ import io.reactivex.rxjava3.core.Single
 
 class AssetApiClient {
 
-    fun getAssets(): Single<List<AssetApiEntity>> =
+    fun getAssets() =
         Single.create<List<AssetApiEntity>> {
             it.onSuccess(
                 listOf(

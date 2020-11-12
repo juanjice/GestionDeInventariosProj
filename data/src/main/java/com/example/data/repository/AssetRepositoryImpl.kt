@@ -11,5 +11,5 @@ class AssetRepositoryImpl (
 ):AssetRepository{
     override fun getAssets(): Single<List<Asset>> =
     assetApiClient.getAssets()
-    .map{it.mapToDomain()}
+    .map { it.mapToDomain() }
 }
