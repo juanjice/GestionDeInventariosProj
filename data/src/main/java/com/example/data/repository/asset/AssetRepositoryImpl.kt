@@ -1,4 +1,4 @@
-package com.example.data.repository
+package com.example.data.repository.asset
 
 import com.example.data.source.api.assets.client.AssetApiClient
 import com.example.data.source.api.assets.entity.mapToDomain

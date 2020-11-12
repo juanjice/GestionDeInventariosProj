@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/documents"
-        android:name="com.example.gestioninventariosapp.ui.fragments.DocumentsFragment"
+        android:name="com.example.gestioninventariosapp.documents.fragment.DocumentsFragment"
         android:label="Fragmento de documentos"
         />
     <fragment
