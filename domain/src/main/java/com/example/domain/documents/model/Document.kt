@@ -1,4 +1,4 @@
-package com.example.gestioninvetariosapp.data
+package com.example.domain.documents.model
 
 data class Document(
     val id: String,

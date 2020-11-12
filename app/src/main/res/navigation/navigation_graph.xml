@@ -7,7 +7,7 @@
 
 <fragment
     android:id="@+id/home"
-    android:name="com.example.gestioninvetariosapp.ui.fragments.HomeFragment"
+    android:name="com.example.gestioninventariosapp.ui.fragments.HomeFragment"
     android:label="Fragmento principal">
     <action
         android:id="@+id/action_home_to_assets"
@@ -25,22 +25,22 @@
 </fragment>
     <fragment
         android:id="@+id/assets"
-        android:name="com.example.gestioninvetariosapp.ui.assets.fragment.AssetsFragment"
+        android:name="com.example.gestioninventariosapp.assets.fragment.AssetsFragment"
         android:label="Fragmento de bienes"
         />
 
     <fragment
         android:id="@+id/documents"
-        android:name="com.example.gestioninvetariosapp.ui.fragments.DocumentsFragment"
+        android:name="com.example.gestioninventariosapp.ui.fragments.DocumentsFragment"
         android:label="Fragmento de documentos"
         />
     <fragment
         android:id="@+id/addItem"
-        android:name="com.example.gestioninvetariosapp.ui.fragments.AddItemFragment"
+        android:name="com.example.gestioninventariosapp.ui.fragments.AddItemFragment"
         android:label="Agregar Item al Stock"
         />
     <fragment
         android:id="@+id/RemoveItem"
-        android:name="com.example.gestioninvetariosapp.ui.fragments.RemoveStockFragment"
+        android:name="com.example.gestioninventariosapp.ui.fragments.RemoveStockFragment"
         android:label="Quitar items del Stock"/>
 </navigation>

@@ -1,7 +1,7 @@
 package com.example.data.di
 
-import com.example.data.repository.AssetsRepositoryImpl
-import com.example.data.source.api.assets.client.AssetsApiClient
+import com.example.data.repository.AssetRepositoryImpl
+import com.example.data.source.api.assets.client.AssetApiClient
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -12,7 +12,7 @@ class DataAssetModule {
     @Singleton
     @Provides
     internal fun provideAssetsRepository(
-        assetApiClient: AssetsApiClient
-    ): AssetsRepositoryImpl = AssetsRepositoryImpl(assetApiClient)
+        assetApiClient: AssetApiClient
+    ): AssetRepositoryImpl = AssetRepositoryImpl(assetApiClient)
 
 }

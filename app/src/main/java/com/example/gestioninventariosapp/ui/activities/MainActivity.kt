@@ -1,4 +1,4 @@
-package com.example.gestioninvetariosapp.ui.activities
+package com.example.gestioninventariosapp.ui.activities
 
 
 import android.os.Bundle
@@ -10,7 +10,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.gestioninventariosapp.R
 import com.example.gestioninventariosapp.R.layout.activity_main
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainActivity : AppCompatActivity() {
 

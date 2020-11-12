@@ -18,7 +18,7 @@
             android:name=".ui.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             />
-        <activity android:name="com.example.gestioninvetariosapp.ui.activities.MainActivity">
+        <activity android:name="com.example.gestioninventariosapp.ui.activities.MainActivity">
 =======
 
         <activity android:name="com.example.gestioninventariosapp.ui.activities.MainActivity">

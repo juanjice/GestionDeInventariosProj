@@ -1,4 +1,4 @@
-package com.example.gestioninvetariosapp.data
+package com.example.domain.asset.model
 
 data class Asset(
     val id: String,
