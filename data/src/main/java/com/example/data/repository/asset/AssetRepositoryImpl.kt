@@ -9,7 +9,7 @@ import io.reactivex.rxjava3.core.Single
 class AssetRepositoryImpl (
     private val assetApiClient:AssetApiClient
 ):AssetRepository{
-    override fun getAssets(): Single<List<Asset>> =
+    override fun getAllAssets(): Single<List<Asset>> =
     assetApiClient.getAssets()
     .map { it.mapToDomain() }
 }
