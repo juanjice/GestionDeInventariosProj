@@ -7,6 +7,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="add item frag" />
+        android:text="add item frag"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-96dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

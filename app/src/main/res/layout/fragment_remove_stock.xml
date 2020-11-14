@@ -1,12 +1,105 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.fragments.RemoveStockFragment">
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_normal"
+    android:layout_marginTop="@dimen/margin_small"
+    app:cardElevation="@dimen/card_elevation"
+    >
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="remove from stock" />
+        android:layout_height="195dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imagenViewAsset"
+            android:layout_width="@dimen/width_image_card"
+            android:layout_height="@dimen/height_image_card"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.101"
+            tools:src="@drawable/ic_baseline_image_24" />
+
+        <TextView
+            android:id="@+id/textViewTittleAsset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:text="Titulo"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title_card_view"
+            app:layout_constraintStart_toEndOf="@id/imagenViewAsset"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewDescAssets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:maxWidth="240dp"
+            android:maxHeight="90dp"
+            android:text="@string/asset_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textViewTittleAsset"
+            app:layout_constraintTop_toBottomOf="@id/textViewTittleAsset"
+            app:layout_constraintVertical_bias="0.116" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="87dp"
+            android:layout_height="42dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            tools:layout_editor_absoluteX="196dp"
+            tools:layout_editor_absoluteY="131dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Remover"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="131dp" />
+
+        <Switch
+            android:id="@+id/Switch_mostrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Switch"
+            tools:layout_editor_absoluteX="254dp"
+            tools:layout_editor_absoluteY="24dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="48dp"
+            android:layout_height="47dp"
+            android:text="Button"
+            tools:layout_editor_absoluteX="108dp"
+            tools:layout_editor_absoluteY="132dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            tools:layout_editor_absoluteX="285dp"
+            tools:layout_editor_absoluteY="131dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>
