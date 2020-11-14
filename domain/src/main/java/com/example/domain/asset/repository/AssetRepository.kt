@@ -5,4 +5,5 @@ import io.reactivex.rxjava3.core.Single
 
 interface AssetRepository {
     fun getAllAssets(): Single<List<Asset>>
+    //fun createAsset():Single<List<Asset>>
 }

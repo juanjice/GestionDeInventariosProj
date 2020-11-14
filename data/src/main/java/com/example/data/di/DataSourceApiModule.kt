@@ -17,7 +17,7 @@ class DataSourceApiModule {
     @Provides
     internal fun provideRetrofit()=
         Retrofit.Builder()
-            .baseUrl("https://us-central1-fb-api-f7812.cloudfunctions.net/app/api/")
+            .baseUrl("https://us-central1-aspi-gestioninv.cloudfunctions.net/app/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     @Singleton
