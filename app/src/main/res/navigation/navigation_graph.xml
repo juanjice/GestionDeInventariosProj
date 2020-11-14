@@ -3,51 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation_graph"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/home">
+
+<fragment
+    android:id="@+id/home"
+    android:name="com.example.gestioninventariosapp.ui.fragments.HomeFragment"
+    android:label="Fragmento principal">
+    <action
+        android:id="@+id/action_home_to_assets"
+        app:destination="@id/assets"/>
+    <action
+        android:id="@+id/action_home_to_documents"
+        app:destination="@id/documents"/>
+    <action
+        android:id="@+id/action_home_to_RemoveItem"
+        app:destination="@id/RemoveItem" />
+    <action
+        android:id="@+id/action_home_to_addItem"
+        app:destination="@id/addItem" />
+
+</fragment>
+    <fragment
+        android:id="@+id/assets"
+        android:name="com.example.gestioninventariosapp.assets.fragment.AssetsFragment"
+        android:label="Fragmento de bienes"
+        />
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.example.homecenterapp.ui.fragments.MainFragment"
-        android:label="navigation_main_fragment"
-        tools:layout="@layout/fragment_main">
-        <action
-            android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
-        <action
-            android:id="@+id/action_firstFragment_to_fourthFragment"
-            app:destination="@id/fourthFragment" />
-
-    </fragment>
+        android:id="@+id/documents"
+        android:name="com.example.gestioninventariosapp.ui.fragments.DocumentsFragment"
+        android:label="Fragmento de documentos"
+        />
     <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.example.homecenterapp.ui.fragments.ItemListFragment"
-        android:label="navigation_second_fragment"
-        tools:layout="@layout/fragment_item_list">
-        <action
-            android:id="@+id/action_secondFragment_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
-    </fragment>
-
+        android:id="@+id/addItem"
+        android:name="com.example.gestioninventariosapp.ui.fragments.AddItemFragment"
+        android:label="Agregar Item al Stock"
+        />
     <fragment
-        android:id="@+id/thirdFragment"
-        android:name="com.example.homecenterapp.ui.fragments.ItemDetailFragment"
-        android:label="navigation_third_fragment"
-        tools:layout="@layout/fragment_item_detail"/>
-
-    <fragment
-        android:id="@+id/fourthFragment"
-        android:name="com.example.homecenterapp.ui.fragments.ItemListEditFragment"
-        android:label="navigation_second_fragment"
-        tools:layout="@layout/fragment_item_list_edit">
-        <action
-            android:id="@+id/action_fourthFragment_to_fifthFragment"
-            app:destination="@id/fifthFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/fifthFragment"
-        android:name="com.example.homecenterapp.ui.fragments.ItemDetailEditFragment"
-        android:label="navigation_fifth_fragment"
-        tools:layout="@layout/fragment_item_detail_edit"/>
-
+        android:id="@+id/RemoveItem"
+        android:name="com.example.gestioninventariosapp.ui.fragments.RemoveStockFragment"
+        android:label="Quitar items del Stock"/>
 </navigation>

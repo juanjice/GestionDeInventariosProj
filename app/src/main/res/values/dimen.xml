@@ -2,4 +2,22 @@
 <resources>
     <dimen name="text_view_size">24sp</dimen>
     <dimen name="image_view_margin_top">30dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_big">50dp</dimen>
+    <dimen name="normal_padding">15dp</dimen>
+    <dimen name="small_box_width">75dp</dimen>
+    <dimen name="small_box_height">50dp</dimen>
+    <dimen name="big_box_width">150dp</dimen>
+    <dimen name="big_box_height">116dp</dimen>
+
+    <dimen name="width_image_card">80dp</dimen>
+    <dimen name="height_image_card">100dp</dimen>
+
+
+    <dimen name="tittle_text_size">20sp</dimen>
+    <dimen name="num_card_view">15sp</dimen>
+    <dimen name="title_card_view">18sp</dimen>
+
 </resources>

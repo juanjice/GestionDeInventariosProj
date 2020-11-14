@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">Inventory Management</string>
-    <string name="crear_lista">Crear lista</string>
-    <string name="editar_lista">Editar lista</string>
-    <string name="ver_detalle">Ver detalle</string>
-    <string name="editar_detalle">Editar detalle</string>
-    <string name="inventory_management">Inventory Management</string>
-    <string name="logo">logo</string>
+    <string name="text_home_menu">Home</string>
+    <string name="text_assets_menu">Assets</string>
+    <string name="text_documents_menu">Documents</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_add_assets">New Entrance</string>
+    <string name="text_del_assets">New Output</string>
+    <string name="text_suppliers">My Suppliers</string>
+    <string name="text_clients">My Clients</string>
+    <string name="asset_tittle">Your possessions</string>
+    <string name="asset_description">Description</string>
+
+
 </resources>
