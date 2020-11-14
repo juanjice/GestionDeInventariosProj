@@ -10,4 +10,9 @@ class AssetRepositoryImpl (    private val assetApiClient:AssetApiClient):AssetR
     override fun getAllAssets(): Single<List<Asset>> =
     assetApiClient.getAssets()
     .map { it.mapToDomain() }
+
+    override fun createAsset(): Single<Asset> =
+        assetApiClient.createAsset()
+            .map { it.mapToDomain() }
+
 }
