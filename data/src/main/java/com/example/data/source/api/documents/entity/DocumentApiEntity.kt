@@ -4,22 +4,18 @@ import com.example.domain.documents.model.Document
 import com.google.gson.annotations.SerializedName
 
 data class DocumentApiEntity(
-    val postId:Int,
-    @SerializedName("id")  val idDoc:Int,
-    @SerializedName("name") val nameDoc:String,
-    val email:String,
-    @SerializedName("body") val contenido:String
+    @SerializedName("id")  val idDoc:String,
+    @SerializedName("name") val nameDoc:String
 )
 fun DocumentApiEntity.mapToDomain(): Document=
     Document(
-        idDoc.toString(),
+        idDoc,
          nameDoc?:"",
         nameDoc?:"",
         nameDoc?:"",
-        postId?:12,
-        contenido,
-        email
-
+        idDoc.toInt()?:1,
+        nameDoc?:"asd",
+        nameDoc?:"asd"
     )
 
 
