@@ -50,7 +50,7 @@
 
     <fragment
         android:id="@+id/login"
-        android:name="com.example.gestioninventariosapp.ui.fragments.LoginFragment"
+        android:name="com.example.gestioninventariosapp.users.fragment.LoginFragment"
         android:label="Iniciar Sesion">
         <action
             android:id="@+id/action_login_to_createAccount"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.LoginFragment">
+    tools:context=".users.fragment.LoginFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text2"
         android:layout_marginTop="@dimen/margin_normal"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         />
     <Button
         android:id="@+id/login_button"

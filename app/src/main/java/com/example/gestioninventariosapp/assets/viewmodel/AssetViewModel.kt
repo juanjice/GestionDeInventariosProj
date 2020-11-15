@@ -29,14 +29,16 @@ constructor(
         compositeDisposable.add(
             createAssetUseCase.execute(name,descripcion,idUser,cantidad,tipo)
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSingleObserver<Asset>() {
+                .subscribeWith(object  : DisposableSingleObserver<Asset>() {
 
                     override fun onError(e: Throwable?) {
                         onsuccess.value=false
+
                     }
 
                     override fun onSuccess(t: Asset?) {
                         onsuccess.value=true
+                        Log.i("este es el articulo",t.toString())
                     }
                 }))
 
