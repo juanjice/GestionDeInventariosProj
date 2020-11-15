@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.gestioninventariosapp.R
 import com.example.gestioninventariosapp.assets.viewmodel.AssetsViewModel
+import com.example.gestioninventariosapp.ui.fragments.HomeFragment
 import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.fragment_add_item.*
 import javax.inject.Inject
@@ -33,14 +34,20 @@ class AddItemFragment : DaggerFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        var userId = arguments?.getString("userId")
+
+        val args = Bundle().apply {
+            putString("userId", userId)
+        }
         add_item_button.setOnClickListener {
+
             viewModel.createAsset(
                 new_asset_name.text.toString(),
                 new_asset_desc.text.toString(),
-                "Y8gpt9xLkvty7agvsgiz",
+                userId?:"",
                 new_asset_cantidad.text.toString().toInt(),
                 new_asset_type.text.toString())
-            findNavController().navigate(R.id.action_addItem_to_assets)
+            findNavController().navigate(R.id.action_addItem_to_assets,args)
         }
     }
 
@@ -55,6 +62,15 @@ class AddItemFragment : DaggerFragment() {
 
         })
 
+    }
+    companion object {
+        @JvmStatic
+        fun newInstance(): AddItemFragment {
+            val fragment = AddItemFragment()
+            val args = Bundle()
+            fragment.arguments = args
+            return fragment
+        }
     }
 
 

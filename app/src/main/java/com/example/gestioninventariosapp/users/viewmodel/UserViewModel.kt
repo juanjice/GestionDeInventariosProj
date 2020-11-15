@@ -18,7 +18,7 @@ constructor(
 
 ) : BaseViewModel(){
     private val existeLiveData= MutableLiveData<User>()
-    private val usersErrorLiveData = MutableLiveData<Unit>()
+
 
     fun verifyaccount(email:String,password:String){
         compositeDisposable.add(
@@ -26,10 +26,11 @@ constructor(
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object  : DisposableSingleObserver<User>() {
                     override fun onError(e: Throwable?) {
-                       usersErrorLiveData.value=Unit
+                        Log.e(" error uiser from service", e.toString())
                     }
 
                     override fun onSuccess(t: User?) {
+                        Log.e("List user service", t.toString())
                         existeLiveData.value=t
                     }
                 }))

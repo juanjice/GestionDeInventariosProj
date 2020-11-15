@@ -8,8 +8,8 @@ import com.example.domain.user.repository.UserRepository
 import io.reactivex.rxjava3.core.Single
 
 class UserRepositoryImpl( private val userApiClient: UserApiClient): UserRepository {
-    override fun getUser(user:User): Single<User> {
-        return userApiClient.isRealUser(user)
+    override fun getUser(email:String,password:String): Single<User> {
+        return userApiClient.isRealUser(email,password)
             .map { it.mapToDomain() }
     }
 

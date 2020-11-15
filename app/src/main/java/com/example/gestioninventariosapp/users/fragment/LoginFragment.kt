@@ -41,7 +41,7 @@ class LoginFragment :  DaggerFragment()  {
                 Toast.makeText(getActivity(),"Fill all the fields !",Toast.LENGTH_LONG).show()
             }else{
 
-                Log.e("give pass",entry_user_password.text.toString())
+                Log.e("give pass",entry_user_password.text.toString()+" "+entry_user_email.text.toString())
                 viewmodel.verifyaccount(
                     entry_user_email.text.toString(),
                     entry_user_password.text.toString()
@@ -62,7 +62,11 @@ class LoginFragment :  DaggerFragment()  {
                Toast.makeText(getActivity(),"Invalid User!",Toast.LENGTH_LONG).show()
            }else{
                Log.i("user valido",user_ret.toString())
-               findNavController().navigate(R.id.action_login_to_home)
+               val args = Bundle().apply {
+                   putString("userIdFinal", user_ret.id)
+               }
+               findNavController().navigate(R.id.action_login_to_home,args)
+
            }
         })
     }

@@ -13,10 +13,10 @@ import io.reactivex.rxjava3.core.Single
 class UserApiClient(private val apiService: UserApiService) {
 
 
-    fun isRealUser(user:User): Single<UserApiEntity> {
-
+    fun isRealUser(email:String,password:String): Single<UserApiEntity> {
+        val userToApi=UserToApi(email,password)
         return Single.create{
-            val call=apiService.getUser(user.email,user.password)
+            val call=apiService.getUser(userToApi.email,userToApi.password)
             val callback=SingleCallback<UserApiEntity>(it)
             call.enqueue(callback)
         }

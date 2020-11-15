@@ -11,5 +11,5 @@ data class UserApiEntity(
 
 )
 fun UserApiEntity.mapToDomain() =
-    User(id?:"",name,email,password)
+    User(id?:"",name?:"",email,password)
 fun List<UserApiEntity>.mapToDomain()=map { it.mapToDomain() }

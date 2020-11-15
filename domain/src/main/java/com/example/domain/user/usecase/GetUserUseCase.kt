@@ -10,8 +10,8 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 class GetUserUseCase(private val userRepository: UserRepository) {
 
     fun execute(email:String,password:String): Single<User>{
-        val user= User("","",email,password)
-        return userRepository.getUser(user).subscribeOn(Schedulers.io())
+
+        return userRepository.getUser(email,password).subscribeOn(Schedulers.io())
 
     }
 

@@ -10,9 +10,9 @@ import io.reactivex.rxjava3.core.Single
 
 class AssetApiClient(private val apiService: AssetApiService) {
 
-    fun getAssets() =
+    fun getAssets(idUser:String) =
         Single.create<List<AssetApiEntity>> {
-            val call =apiService.getAllAssets()
+            val call =apiService.getAllAssets(idUser)
             val callback= SingleCallback<List<AssetApiEntity>>(it)
             call.enqueue(callback)
         }

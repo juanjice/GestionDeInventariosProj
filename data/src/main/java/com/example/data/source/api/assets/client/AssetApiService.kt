@@ -8,8 +8,10 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface AssetApiService {
-    @GET("assets/")
-    fun getAllAssets(): Call<List<AssetApiEntity>>
+    @GET("assets/user")
+    fun getAllAssets(
+        @Query("idUser") isUser:String
+    ): Call<List<AssetApiEntity>>
     @Headers("Content-Type: application/json")
     @POST("assets")
     fun createOneAsset(@Body
