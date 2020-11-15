@@ -13,5 +13,9 @@ class UserRepositoryImpl( private val userApiClient: UserApiClient): UserReposit
             .map { it.mapToDomain() }
     }
 
+    override fun createUserIfIsPosible(user: User): Single<User> {
+        return userApiClient.createUser(user).map { it.mapToDomain() }
+    }
+
 
 }

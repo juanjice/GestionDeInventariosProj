@@ -81,42 +81,6 @@ constructor(
 
     }
 
-    /*init {
-
-        compositeDisposable.add(
-            getAssetsUseCase.execute(idUser)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSingleObserver<List<Asset>>() {
-                    override fun onSuccess(t: List<Asset>?) {
-                        assetsLiveData.value = t
-                    }
-
-                    override fun onError(e: Throwable?) {
-
-                    }
-                })
-
-        )
-        compositeDisposable.add(
-            getDocumentUseCase.execute()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSingleObserver<List<Document>>(){
-                    override fun onSuccess(t: List<Document>?) {
-                        Log.e("lista de api",t.toString())
-                    }
-
-                    override fun onError(e: Throwable?) {
-                        Log.e("errorarse",e.toString())
-                    }
-
-
-                }
-                )
-
-        )
-
-    }*/
-
     fun getAssetLiveData(): LiveData<List<Asset>> = assetsLiveData
 
     fun getOncreatedAssetData():LiveData<Boolean> = onsuccess

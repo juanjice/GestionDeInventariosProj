@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.SingUpFragment"
+    tools:context=".users.fragment.SingUpFragment"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
@@ -27,7 +27,8 @@
         app:layout_constraintStart_toStartOf="@id/entry_register_name"
         app:layout_constraintTop_toBottomOf="@id/id_singup_tittle"
         android:layout_marginTop="@dimen/margin_big"
-        android:textSize="@dimen/title_card_view"/>
+        android:textSize="@dimen/title_card_view"
+        android:inputType="text"/>
 
     <EditText
         android:id="@+id/entry_register_name"
@@ -47,7 +48,8 @@
         app:layout_constraintStart_toStartOf="@id/entry_register_email"
         app:layout_constraintTop_toBottomOf="@id/entry_register_name"
         android:layout_marginTop="@dimen/margin_big"
-        android:textSize="@dimen/title_card_view"/>
+        android:textSize="@dimen/title_card_view"
+        android:inputType="textEmailAddress"/>
 
     <EditText
         android:id="@+id/entry_register_email"
@@ -68,6 +70,7 @@
         app:layout_constraintTop_toBottomOf="@id/entry_register_email"
         android:layout_marginTop="@dimen/margin_big"
         android:textSize="@dimen/title_card_view"
+
         />
     <EditText
         android:id="@+id/entry_register_password"
@@ -77,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text2"
         android:layout_marginTop="@dimen/margin_normal"
-        android:inputType="textEmailAddress"
+        android:inputType="textPassword"
         />
     <Button
         android:id="@+id/singup_button"

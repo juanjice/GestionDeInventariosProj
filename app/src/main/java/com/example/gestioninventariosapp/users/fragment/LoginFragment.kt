@@ -15,6 +15,8 @@ import dagger.android.support.DaggerFragment
 
 import kotlinx.android.synthetic.main.fragment_login.*
 import androidx.lifecycle.Observer
+import androidx.preference.PreferenceManager
+import com.example.gestioninventariosapp.ui.prefs.MyPreference
 import javax.inject.Inject
 
 class LoginFragment :  DaggerFragment()  {
@@ -23,6 +25,7 @@ class LoginFragment :  DaggerFragment()  {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
     }
 
@@ -62,11 +65,9 @@ class LoginFragment :  DaggerFragment()  {
                Toast.makeText(getActivity(),"Invalid User!",Toast.LENGTH_LONG).show()
            }else{
                Log.i("user valido",user_ret.toString())
-               val args = Bundle().apply {
-                   putString("userId", user_ret.id)
-                   
-               }
-               findNavController().navigate(R.id.action_login_to_home,args)
+               val myPreference= MyPreference(requireContext())
+               myPreference.setUserId(user_ret.id)
+               findNavController().navigate(R.id.action_login_to_home)
 
            }
         })

@@ -76,19 +76,18 @@
             android:id="@+id/action_login_to_home"
             app:destination="@id/home" >
 
-            <argument
-                android:name="idUser"
-                app:argType="string"
-                app:nullable="false"/>
         </action>
 
     </fragment>
     <fragment
         android:id="@+id/createAccount"
-        android:name="com.example.gestioninventariosapp.ui.fragments.SingUpFragment"
+        android:name="com.example.gestioninventariosapp.users.fragment.SingUpFragment"
         android:label="Crear Cuenta">
         <action
             android:id="@+id/action_createAccount_to_login"
             app:destination="@id/login" />
+        <action
+            android:id="@+id/action_createAccount_to_home"
+            app:destination="@id/home" />
     </fragment>
 </navigation>

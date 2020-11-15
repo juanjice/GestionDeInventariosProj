@@ -4,6 +4,7 @@ import com.example.data.repository.asset.AssetRepositoryImpl
 import com.example.data.repository.user.UserRepositoryImpl
 import com.example.domain.asset.usecase.CreateAssetUseCase
 import com.example.domain.asset.usecase.GetAssetsUseCase
+import com.example.domain.user.usecase.CreateUserUseCase
 import com.example.domain.user.usecase.GetUserUseCase
 import dagger.Module
 import dagger.Provides
@@ -17,5 +18,11 @@ class UserModule {
     internal fun provideGetUserUseCase(
         userRepositoryImpl: UserRepositoryImpl
     )=GetUserUseCase(userRepositoryImpl)
+
+    @Singleton
+    @Provides
+    internal fun createUserUseCase(
+        userRepositoryImpl: UserRepositoryImpl
+    ): CreateUserUseCase= CreateUserUseCase(userRepositoryImpl)
 
 }
