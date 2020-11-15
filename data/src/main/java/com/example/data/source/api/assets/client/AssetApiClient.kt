@@ -20,8 +20,8 @@ class AssetApiClient(private val apiService: AssetApiService) {
             call.enqueue(callback)
         }
     //asset:Asset
-    fun createAsset():Single<AssetApiEntity>{
-      val assetToApi=AssetToApi("as6456d","100","asdasd","asd","asd")
+    fun createAsset(asset: Asset):Single<AssetApiEntity>{
+      val assetToApi=AssetToApi(asset.name,asset.cantidad.toString(),asset.descripcion,asset.idUser,asset.tipo)
       //val jsonInString=gson.toJson(assetToApi)
         return Single.create{
             val call=apiService.createOneAsset(
@@ -37,5 +37,6 @@ class AssetApiClient(private val apiService: AssetApiService) {
             call.enqueue(callback)
         }
     }
+
 
 }

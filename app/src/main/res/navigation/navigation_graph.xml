@@ -36,7 +36,7 @@
         />
     <fragment
         android:id="@+id/addItem"
-        android:name="com.example.gestioninventariosapp.ui.fragments.AddItemFragment"
+        android:name="com.example.gestioninventariosapp.assets.fragment.AddItemFragment"
         android:label="Agregar Item al Stock"
         />
     <fragment

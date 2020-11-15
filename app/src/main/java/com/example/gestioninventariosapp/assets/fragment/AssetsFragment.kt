@@ -15,6 +15,7 @@ import com.example.gestioninventariosapp.assets.viewmodel.AssetsViewModel
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import dagger.android.support.DaggerFragment
+import kotlinx.android.synthetic.main.fragment_add_item.*
 import kotlinx.android.synthetic.main.fragment_assets.*
 import javax.inject.Inject
 
@@ -39,7 +40,13 @@ class AssetsFragment : DaggerFragment() {
         recyclerAssets.layoutManager=LinearLayoutManager(context,VERTICAL,false)
         recyclerAssets.adapter=assetsAdapter
 
-        text_view_frag_asset.setOnClickListener{viewModel.createAsset("a")}
+        text_view_frag_asset.setOnClickListener{viewModel.createAsset(
+            new_asset_name.text.toString(),
+            new_asset_desc.text.toString(),
+            "Y8gpt9xLkvty7agvsgiz",
+            new_asset_cantidad.text.toString().toInt(),
+            new_asset_type.text.toString()
+        )}
 
     }
 
@@ -58,6 +65,7 @@ class AssetsFragment : DaggerFragment() {
             }
 
         })
+
     }
 
 

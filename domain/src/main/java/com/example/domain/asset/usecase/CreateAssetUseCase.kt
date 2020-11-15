@@ -7,8 +7,9 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 
 class CreateAssetUseCase(private val assetsRepository: AssetRepository ) {
 
-    fun execute(): Single<Asset> =
-    assetsRepository.createAsset()
-    .subscribeOn(Schedulers.io())
+    fun execute(name:String,descripcion:String,idUser:String,cantidad:Int,tipo:String): Single<Asset> {
+        val asset=Asset("",name,cantidad,descripcion,idUser,tipo)
+        return assetsRepository.createAsset(asset).subscribeOn(Schedulers.io())
+    }
 
 }

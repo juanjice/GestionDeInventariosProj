@@ -25,9 +25,9 @@ constructor(
 ) : BaseViewModel(){
     private val onsuccess=MutableLiveData<Boolean>()
 
-    fun createAsset(name:String){
+    fun createAsset(name:String,descripcion:String,idUser:String,cantidad:Int,tipo:String){
         compositeDisposable.add(
-            createAssetUseCase.execute()
+            createAssetUseCase.execute(name,descripcion,idUser,cantidad,tipo)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : DisposableSingleObserver<Asset>() {
 
