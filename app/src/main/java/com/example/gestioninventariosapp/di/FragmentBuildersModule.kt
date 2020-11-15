@@ -17,7 +17,6 @@ abstract class FragmentBuildersModule {
     abstract fun contributeAddItemFragment():AddItemFragment
     @ContributesAndroidInjector
     abstract fun contributeLoginFragment():LoginFragment
-    @ContributesAndroidInjector
-    abstract fun contributeHomeFragment():HomeFragment
+
 
 }

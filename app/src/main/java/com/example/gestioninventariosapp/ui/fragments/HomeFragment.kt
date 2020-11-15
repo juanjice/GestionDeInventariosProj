@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.gestioninventariosapp.R
 import com.example.gestioninventariosapp.users.viewmodel.UserViewModel
@@ -16,10 +17,9 @@ import kotlinx.android.synthetic.main.fragment_login.*
 import javax.inject.Inject
 
 
-class HomeFragment : DaggerFragment() {
+class HomeFragment : Fragment() {
 
-    @Inject
-    lateinit var viewmodel: UserViewModel
+
     lateinit var args:Bundle
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,15 +37,10 @@ class HomeFragment : DaggerFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        var email = arguments?.getString("userEmail")
-        var password = arguments?.getString("userPassword")
-        Log.i("user inf",email+"  "+password)
-
-        viewmodel.verifyaccount(
-            password?:"",
-            email?:""
-        )
+        var userid = arguments?.getString("userId")
+        val args = Bundle().apply {
+             putString("userId", userid)
+            }
         assetsButton.setOnClickListener {
 
             findNavController().navigate(R.id.action_home_to_assets,args)
@@ -65,15 +60,7 @@ class HomeFragment : DaggerFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        var email = arguments?.getString("userEmail")
-        var password = arguments?.getString("userPassword")
-        Log.i("user inf",email+"  "+password)
-        viewmodel.onVeryfiedAccount().observe(viewLifecycleOwner, Observer { user_ret->
-            text_view_prueba.setText(user_ret.id)
-            args = Bundle().apply {
-                putString("userId", user_ret.id)
-            }
-        })
+
 
     }
 

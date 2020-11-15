@@ -63,8 +63,8 @@ class LoginFragment :  DaggerFragment()  {
            }else{
                Log.i("user valido",user_ret.toString())
                val args = Bundle().apply {
-                   putString("userEmail", user_ret.email)
-                   putString("userPassword", user_ret.password)
+                   putString("userId", user_ret.id)
+                   
                }
                findNavController().navigate(R.id.action_login_to_home,args)
 
