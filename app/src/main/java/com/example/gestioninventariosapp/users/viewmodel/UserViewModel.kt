@@ -19,7 +19,6 @@ constructor(
 ) : BaseViewModel(){
     private val existeLiveData= MutableLiveData<User>()
 
-
     fun verifyaccount(email:String,password:String){
         compositeDisposable.add(
             getUserUseCase.execute(email,password)
