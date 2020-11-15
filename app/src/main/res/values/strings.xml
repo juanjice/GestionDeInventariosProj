@@ -13,5 +13,9 @@
     <string name="asset_description">Description</string>
     <string name="add_asset_tittle">Add a possetion</string>
     <string name="acept_button">Send</string>
+    <string name="login_tittle">Login</string>
+    <string name="signup_tittle">Sign Up</string>
+    <string name="already_account">You dont have account?</string>
+    <string name="yet_account">Do you already have an account?</string>
 
 </resources>

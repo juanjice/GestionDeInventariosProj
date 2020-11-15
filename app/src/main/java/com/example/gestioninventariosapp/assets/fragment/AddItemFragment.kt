@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.example.gestioninventariosapp.R
 import com.example.gestioninventariosapp.assets.viewmodel.AssetsViewModel
 import dagger.android.support.DaggerFragment
@@ -39,6 +40,7 @@ class AddItemFragment : DaggerFragment() {
                 "Y8gpt9xLkvty7agvsgiz",
                 new_asset_cantidad.text.toString().toInt(),
                 new_asset_type.text.toString())
+            findNavController().navigate(R.id.action_addItem_to_assets)
         }
     }
 

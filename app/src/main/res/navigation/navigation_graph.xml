@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation_graph"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/home">
+    app:startDestination="@id/login">
 
 <fragment
     android:id="@+id/home"
@@ -37,10 +37,34 @@
     <fragment
         android:id="@+id/addItem"
         android:name="com.example.gestioninventariosapp.assets.fragment.AddItemFragment"
-        android:label="Agregar Item al Stock"
-        />
+        android:label="Agregar Item al Stock">
+        <action
+            android:id="@+id/action_addItem_to_assets"
+            app:destination="@id/assets" />
+    </fragment>
+
     <fragment
         android:id="@+id/RemoveItem"
         android:name="com.example.gestioninventariosapp.ui.fragments.RemoveStockFragment"
         android:label="Quitar items del Stock"/>
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.gestioninventariosapp.ui.fragments.LoginFragment"
+        android:label="Iniciar Sesion">
+        <action
+            android:id="@+id/action_login_to_createAccount"
+            app:destination="@id/createAccount" />
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccount"
+        android:name="com.example.gestioninventariosapp.ui.fragments.SingUpFragment"
+        android:label="Crear Cuenta">
+        <action
+            android:id="@+id/action_createAccount_to_login"
+            app:destination="@id/login" />
+    </fragment>
 </navigation>
