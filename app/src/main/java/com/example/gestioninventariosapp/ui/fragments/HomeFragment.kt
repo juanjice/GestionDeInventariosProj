@@ -46,6 +46,9 @@ class HomeFragment : Fragment() {
         input_assetButton.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_addItem, args)
         }
+        group_peopleButton.setOnClickListener{
+            Toast.makeText(getContext(),"This function is temporarily unavailable",Toast.LENGTH_LONG).show()
+        }
 
 
     }
@@ -55,7 +58,7 @@ class HomeFragment : Fragment() {
         val myPreference=MyPreference(requireContext())
         myPreference.setUserId(myPreference.getUserId())
         val realname= arguments?.getString("name")
-        Toast.makeText(getContext(),"Welcome "+ realname,Toast.LENGTH_LONG)
+        Toast.makeText(getContext(),"Welcome "+ realname,Toast.LENGTH_LONG).show()
     }
 
     companion object {

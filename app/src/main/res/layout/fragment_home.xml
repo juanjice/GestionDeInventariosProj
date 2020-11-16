@@ -56,12 +56,12 @@
             app:layout_rowWeight="1" />
 
         <ImageButton
-            android:id="@+id/output_assetButton"
+            android:id="@+id/group_peopleButton"
             android:layout_marginStart="@dimen/margin_normal"
             android:layout_marginTop="@dimen/margin_normal"
             android:background="@color/md_blue_700"
             android:contentDescription="@string/text_assets_menu"
-            android:src="@drawable/ic_baseline_indeterminate_check_box_24"
+            android:src="@drawable/ic_baseline_people_alt_24"
             app:layout_column="1"
             app:layout_columnWeight="1"
             app:layout_row="1"
