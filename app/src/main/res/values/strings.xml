@@ -11,6 +11,23 @@
     <string name="text_clients">My Clients</string>
     <string name="asset_tittle">Your possessions</string>
     <string name="asset_description">Description</string>
+    <string name="add_asset_tittle">Add a possetion</string>
+    <string name="acept_button">Send</string>
+    <string name="login_tittle">Login</string>
+    <string name="signup_tittle">Sign Up</string>
+    <string name="already_account">You dont have account?</string>
+    <string name="yet_account">Do you already have an account?</string>
+
+
+    <string name="card_tittle">Tittle</string>
+    <string name="docuemnt_tittle_fragment">Your Transactions</string>
+    <string name="card_tittle_cont_fecha">Date:</string>
+    <string name="card_tittle_cont_desc">Description:</string>
+    <string name="card_tittle_cont_persona_asoc">Client:</string>
+    <string name="card_tittle_cont_cont_fecha">Date</string>
+    <string name="card_tittle_cont_cont_desc">Description</string>
+    <string name="card_tittle_cont_cont_persona_asoc">Client</string>
+    <string name="card_tittle_cont_cont_cantidad">1</string>
 
 
 </resources>

@@ -2,6 +2,7 @@ package com.example.gestioninventariosapp.documents.di
 
 
 import com.example.data.repository.documents.DocumentRepositoryImpl
+import com.example.domain.documents.usecase.CreateDocumentUseCase
 import com.example.domain.documents.usecase.GetDocumentsUseCase
 import dagger.Module
 import dagger.Provides
@@ -15,5 +16,11 @@ class DocumentModule {
     internal fun provideGetDocumentsUseCase(
         documentRepositoryImpl: DocumentRepositoryImpl
     ) = GetDocumentsUseCase(documentRepositoryImpl)
+
+    @Singleton
+    @Provides
+    internal fun provideCreateDocumentsUseCase(
+        documentRepositoryImpl: DocumentRepositoryImpl
+    ) = CreateDocumentUseCase(documentRepositoryImpl)
 
 }

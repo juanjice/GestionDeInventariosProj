@@ -4,9 +4,8 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.domain.asset.model.Asset
+import com.example.domain.asset.usecase.CreateAssetUseCase
 import com.example.domain.asset.usecase.GetAssetsUseCase
-import com.example.domain.documents.model.Document
-import com.example.domain.documents.usecase.GetDocumentsUseCase
 import com.example.gestioninventariosapp.BaseViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.observers.DisposableSingleObserver
@@ -16,14 +15,35 @@ class AssetsViewModel
 @Inject
 constructor(
     private val getAssetsUseCase: GetAssetsUseCase,
-    private val getDocumentUseCase: GetDocumentsUseCase
-) : BaseViewModel(){
+    private val createAssetUseCase: CreateAssetUseCase
 
+) : BaseViewModel(){
+    private val onsuccess=MutableLiveData<Boolean>()
+
+    fun createAsset(name:String,descripcion:String,idUser:String,cantidad:Int,tipo:String){
+        compositeDisposable.add(
+            createAssetUseCase.execute(name,descripcion,idUser,cantidad,tipo)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(object  : DisposableSingleObserver<Asset>() {
+
+                    override fun onError(e: Throwable?) {
+                        onsuccess.value=false
+
+                    }
+
+                    override fun onSuccess(t: Asset?) {
+                        onsuccess.value=true
+                        Log.i("este es el articulo",t.toString())
+                    }
+                }))
+
+
+    }
     private val assetsLiveData= MutableLiveData<List<Asset>>()
 
-    init {
+    fun verData(idUser:String){
         compositeDisposable.add(
-            getAssetsUseCase.execute()
+            getAssetsUseCase.execute(idUser)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : DisposableSingleObserver<List<Asset>>() {
                     override fun onSuccess(t: List<Asset>?) {
@@ -34,27 +54,11 @@ constructor(
 
                     }
                 })
-
         )
-        compositeDisposable.add(
-            getDocumentUseCase.execute()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSingleObserver<List<Document>>(){
-                    override fun onSuccess(t: List<Document>?) {
-                        Log.e("lista de api",t.toString())
-                    }
-
-                    override fun onError(e: Throwable?) {
-                        Log.e("errorarse",e.toString())
-                    }
-
-
-                }
-                )
-
-        )
-
     }
+
     fun getAssetLiveData(): LiveData<List<Asset>> = assetsLiveData
+
+    fun getOncreatedAssetData():LiveData<Boolean> = onsuccess
 }
 

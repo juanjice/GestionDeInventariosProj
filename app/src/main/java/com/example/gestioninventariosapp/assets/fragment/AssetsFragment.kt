@@ -1,6 +1,7 @@
 package com.example.gestioninventariosapp.assets.fragment
 
 import android.os.Bundle
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager.VERTICAL
 import com.example.gestioninventariosapp.R
 import com.example.gestioninventariosapp.assets.items.AssetsItem
 import com.example.gestioninventariosapp.assets.viewmodel.AssetsViewModel
+import com.example.gestioninventariosapp.ui.prefs.MyPreference
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import dagger.android.support.DaggerFragment
@@ -18,7 +20,6 @@ import javax.inject.Inject
 
 class AssetsFragment : DaggerFragment() {
 
-    @Inject lateinit var testString: String
     @Inject lateinit var viewModel: AssetsViewModel
 
     val assetsAdapter= GroupAdapter<GroupieViewHolder>()
@@ -36,16 +37,52 @@ class AssetsFragment : DaggerFragment() {
         super.onViewCreated(view, savedInstanceState)
         recyclerAssets.layoutManager=LinearLayoutManager(context,VERTICAL,false)
         recyclerAssets.adapter=assetsAdapter
-    }
+        val userId = arguments?.getString("userId")
+        if(userId!=null){
+            viewModel.verData(
+                userId?:""
+            )
+            viewModel.getAssetLiveData().observe(viewLifecycleOwner, Observer { assets->
+                assetsAdapter.addAll(
+                    assets.map{AssetsItem(it)}
+                )
 
+            })
+
+        }
+
+
+    }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel.getAssetLiveData().observe(viewLifecycleOwner, Observer { assets->
-            assetsAdapter.addAll(
-                assets.map{AssetsItem(it)}
+        val userId = arguments?.getString("userId")
+        if(userId==null){
+            val myPreference= MyPreference(requireContext())
+            val userid= myPreference.getUserId()
+            viewModel.verData(
+                userid?:""
             )
-        })
+            viewModel.getAssetLiveData().observe(viewLifecycleOwner, Observer { assets->
+                assetsAdapter.addAll(
+                    assets.map{AssetsItem(it)}
+                )
+
+            })
+
+        }
+
+
     }
+    companion object {
+        @JvmStatic
+        fun newInstance(): AssetsFragment {
+            val fragment = AssetsFragment()
+            val args = Bundle()
+            fragment.arguments = args
+            return fragment
+        }
+    }
+
 
 
 }
