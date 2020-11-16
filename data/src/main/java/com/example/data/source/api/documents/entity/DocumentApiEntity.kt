@@ -2,21 +2,29 @@ package com.example.data.source.api.documents.entity
 
 import com.example.domain.documents.model.Document
 import com.google.gson.annotations.SerializedName
+import java.text.SimpleDateFormat
+import java.util.*
 
 data class DocumentApiEntity(
-    @SerializedName("id")  val idDoc:String,
-    @SerializedName("name") val nameDoc:String
+   val id:String,
+   val name:String,
+   val cantidad:String,
+   val idUser :String,
+   val fecha :String,
+   val persona_asociada:String
 )
-fun DocumentApiEntity.mapToDomain(): Document=
-    Document(
-        idDoc,
-         nameDoc?:"",
-        nameDoc?:"",
-        nameDoc?:"",
-        idDoc.toInt()?:1,
-        nameDoc?:"asd",
-        nameDoc?:"asd"
+fun DocumentApiEntity.mapToDomain(): Document{
+
+    return Document(
+        id,
+        name,
+        cantidad.toInt(),
+        idUser,
+        fecha,
+        persona_asociada
     )
+
+}
 
 
 fun List<DocumentApiEntity>.mapToDomain() = this.map { it.mapToDomain() }

@@ -1,6 +1,7 @@
 package com.example.gestioninventariosapp.assets.di
 
 import com.example.data.repository.asset.AssetRepositoryImpl
+import com.example.domain.asset.usecase.CreateAssetUseCase
 import com.example.domain.asset.usecase.GetAssetsUseCase
 import dagger.Module
 import dagger.Provides
@@ -14,5 +15,10 @@ class AssetModule {
     internal fun provideGetAssetUseCase(
         assetRepositoryImpl: AssetRepositoryImpl
     ): GetAssetsUseCase= GetAssetsUseCase(assetRepositoryImpl)
+    @Singleton
+    @Provides
+    internal fun createAssetUseCase(
+        assetRepositoryImpl: AssetRepositoryImpl
+    ): CreateAssetUseCase= CreateAssetUseCase(assetRepositoryImpl)
 
 }

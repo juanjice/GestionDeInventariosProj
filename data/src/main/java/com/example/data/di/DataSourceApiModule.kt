@@ -4,6 +4,8 @@ import com.example.data.source.api.assets.client.AssetApiClient
 import com.example.data.source.api.assets.client.AssetApiService
 import com.example.data.source.api.documents.client.DocumentApiClient
 import com.example.data.source.api.documents.client.DocumentApiService
+import com.example.data.source.api.users.client.UserApiClient
+import com.example.data.source.api.users.client.UserApiService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -29,5 +31,10 @@ class DataSourceApiModule {
     @Provides
     internal  fun provideDocumentApiClient(retrofit:Retrofit)=
         DocumentApiClient(retrofit.create(DocumentApiService::class.java))
+
+    @Singleton
+    @Provides
+    internal fun providePostsApiClient(retrofit: Retrofit) =
+        UserApiClient(retrofit.create(UserApiService::class.java))
 
 }

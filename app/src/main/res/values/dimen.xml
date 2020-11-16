@@ -20,4 +20,6 @@
     <dimen name="num_card_view">15sp</dimen>
     <dimen name="title_card_view">18sp</dimen>
 
+    //formularios
+    <dimen name="ancho_inputs">250dp</dimen>
 </resources>

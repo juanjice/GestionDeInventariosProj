@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_normal"
+    android:layout_marginTop="@dimen/margin_small"
+    app:cardElevation="@dimen/card_elevation"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imagenViewDocument"
+            android:layout_width="@dimen/width_image_card"
+            android:layout_height="@dimen/height_image_card"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_rule_folder_24" />
+
+        <TextView
+            android:id="@+id/textViewTittleDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/card_tittle"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/imagenViewDocument"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:textSize="@dimen/title_card_view"/>
+        <ImageButton
+            android:id="@+id/output_asset_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPersonaDocument"
+            android:layout_marginTop="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_edit_24"
+            />
+
+        <TextView
+            android:id="@+id/fecha_text_view_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/card_tittle_cont_fecha"
+            app:layout_constraintRight_toLeftOf="@+id/textViewTotalDocument"
+            app:layout_constraintStart_toStartOf="@+id/textViewTittleDocument"
+            app:layout_constraintTop_toBottomOf="@id/textViewTittleDocument"
+            android:layout_marginTop="@dimen/margin_normal"
+            tools:layout_editor_absoluteY="41dp" />
+
+        <TextView
+            android:id="@+id/textViewFechaDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="300dp"
+            android:maxWidth="240dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="@id/textViewTittleDocument"
+            app:layout_constraintTop_toBottomOf="@id/fecha_text_view_no"
+            app:layout_constraintRight_toLeftOf="@id/textViewTotalDocument"
+            android:layout_marginRight="@dimen/margin_small"
+            android:text="@string/card_tittle_cont_cont_fecha"/>
+
+        <TextView
+            android:id="@+id/personaasco_text_view_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/card_tittle_cont_persona_asoc"
+            app:layout_constraintRight_toLeftOf="@+id/textViewTotalDocument"
+            app:layout_constraintStart_toStartOf="@+id/textViewTittleDocument"
+            app:layout_constraintTop_toBottomOf="@id/textViewFechaDocument"
+            android:layout_marginTop="@dimen/margin_normal"
+            tools:layout_editor_absoluteY="41dp" />
+
+        <TextView
+            android:id="@+id/textViewPersonaDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_small"
+            android:maxWidth="240dp"
+            android:maxHeight="300dp"
+            android:text="@string/card_tittle_cont_cont_persona_asoc"
+            app:layout_constraintTop_toBottomOf="@id/personaasco_text_view_no"
+            app:layout_constraintRight_toLeftOf="@id/textViewTotalDocument"
+            app:layout_constraintStart_toStartOf="@id/textViewTittleDocument"
+            android:layout_marginTop="@dimen/margin_normal"
+            tools:layout_editor_absoluteY="64dp" />
+
+        <TextView
+            android:id="@+id/textViewTotalDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:text="@string/card_tittle_cont_cont_cantidad"
+            android:textColor="@color/black"
+            android:textSize="@dimen/num_card_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

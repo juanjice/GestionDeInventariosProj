@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
 
-                R.id.assets, R.id.documents,R.id.RemoveItem,R.id.addItem ->{
+                R.id.assets, R.id.documents,R.id.addItem ->{
                     Log.i("Homemsg","Pinchaste sobre algo")
                     bottomMenu.visibility=View.VISIBLE
                 }

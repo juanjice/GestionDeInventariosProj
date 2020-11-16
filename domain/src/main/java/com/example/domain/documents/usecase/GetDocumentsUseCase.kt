@@ -7,8 +7,8 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 
 class GetDocumentsUseCase(private val documentRepository: DocumentRepository) {
 
-    fun execute(): Single<List<Document>> =
-    documentRepository.getAllDocuments()
+    fun execute(idUser:String): Single<List<Document>> =
+    documentRepository.getAllDocuments(idUser)
         .subscribeOn(Schedulers.io())
 
 }
