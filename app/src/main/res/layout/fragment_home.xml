@@ -68,8 +68,20 @@
             app:layout_rowWeight="1" />
 
 
-    </androidx.gridlayout.widget.GridLayout>
 
+    </androidx.gridlayout.widget.GridLayout>
+    <ImageButton
+        android:id="@+id/leavehome"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/margin_big"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:src="@drawable/ic_baseline_exit_to_app_24"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        />
 <TextView
     android:id="@+id/text_view_prueba"
     android:layout_width="wrap_content"

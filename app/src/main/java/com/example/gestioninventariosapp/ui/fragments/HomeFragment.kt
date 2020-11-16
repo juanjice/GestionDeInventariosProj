@@ -49,7 +49,11 @@ class HomeFragment : Fragment() {
         group_peopleButton.setOnClickListener{
             Toast.makeText(getContext(),"This function is temporarily unavailable",Toast.LENGTH_LONG).show()
         }
-
+        leavehome.setOnClickListener {
+            val myPreference=MyPreference(requireContext())
+            myPreference.setUserId("")
+            findNavController().navigate(R.id.action_home_to_login)
+        }
 
     }
 
