@@ -58,7 +58,7 @@ class HomeFragment : Fragment() {
         val myPreference=MyPreference(requireContext())
         myPreference.setUserId(myPreference.getUserId())
         val realname= arguments?.getString("name")
-        Toast.makeText(getContext(),"Welcome "+ realname,Toast.LENGTH_LONG).show()
+        if(realname!=null){Toast.makeText(getContext(),"Welcome "+ realname,Toast.LENGTH_LONG).show()}
     }
 
     companion object {
