@@ -67,7 +67,10 @@ class LoginFragment :  DaggerFragment()  {
                Log.i("user valido",user_ret.toString())
                val myPreference= MyPreference(requireContext())
                myPreference.setUserId(user_ret.id)
-               findNavController().navigate(R.id.action_login_to_home)
+               val args = Bundle().apply {
+                   putString("name", user_ret.name)
+               }
+               findNavController().navigate(R.id.action_login_to_home,args)
 
            }
         })

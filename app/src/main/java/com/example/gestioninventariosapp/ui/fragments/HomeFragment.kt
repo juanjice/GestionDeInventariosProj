@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.gestioninventariosapp.R
@@ -34,7 +35,7 @@ class HomeFragment : Fragment() {
         val args = Bundle().apply {
              putString("userId", userid)
             }
-        text_view_prueba.setText(userid)
+
         assetsButton.setOnClickListener {
 
             findNavController().navigate(R.id.action_home_to_assets, args)
@@ -53,6 +54,8 @@ class HomeFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         val myPreference=MyPreference(requireContext())
         myPreference.setUserId(myPreference.getUserId())
+        val realname= arguments?.getString("name")
+        Toast.makeText(getContext(),"Welcome "+ realname,Toast.LENGTH_LONG)
     }
 
     companion object {

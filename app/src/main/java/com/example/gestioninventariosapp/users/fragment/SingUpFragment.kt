@@ -63,7 +63,10 @@ class SingUpFragment : DaggerFragment() {
             }else{
                 val myPreference= MyPreference(requireContext())
                 myPreference.setUserId(user_ret.id)
-                findNavController().navigate(R.id.action_createAccount_to_home)
+                val args = Bundle().apply {
+                    putString("name", user_ret.name)
+                }
+                findNavController().navigate(R.id.action_createAccount_to_home,args)
 
             }
         })

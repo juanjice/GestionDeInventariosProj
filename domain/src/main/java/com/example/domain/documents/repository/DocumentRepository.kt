@@ -5,4 +5,5 @@ import io.reactivex.rxjava3.core.Single
 
 interface DocumentRepository {
     fun getAllDocuments(idUser:String): Single<List<Document>>
+    fun createDocument(document:Document):Single<Document>
 }

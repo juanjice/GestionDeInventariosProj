@@ -37,7 +37,12 @@
         >
         <action
             android:id="@+id/action_assets_to_documents"
-            app:destination="@id/documents" />
+            app:destination="@id/documents" >
+            <argument
+                android:name="idUser"
+                app:argType="string"
+                app:nullable="false"/>
+        </action>
     </fragment>
 
     <fragment

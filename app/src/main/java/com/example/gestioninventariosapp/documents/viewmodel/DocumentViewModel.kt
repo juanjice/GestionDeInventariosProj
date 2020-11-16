@@ -1,9 +1,11 @@
 package com.example.gestioninventariosapp.documents.viewmodel
 
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.domain.documents.model.Document
+import com.example.domain.documents.usecase.CreateDocumentUseCase
 import com.example.domain.documents.usecase.GetDocumentsUseCase
 import com.example.gestioninventariosapp.BaseViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
@@ -16,30 +18,29 @@ import javax.inject.Inject
 class DocumentViewModel
 @Inject
 constructor(
+    private val createDocumentUseCase: CreateDocumentUseCase,
     private val getDocumentUseCase: GetDocumentsUseCase
 
 ) : BaseViewModel(){
     private val onsuccess= MutableLiveData<Boolean>()
 
-   /* fun createDocument(name:String,descripcion:String,idUser:String,cantidad:Int,tipo:String){
+    fun createDocument(name:String?,cantidad:Int?,idUser:String?,fecha:String?,persona_asoc:String?){
         compositeDisposable.add(
-            createDocumentUseCase.execute(name,descripcion,idUser,cantidad,tipo)
+            createDocumentUseCase.execute(name,cantidad,idUser,fecha,persona_asoc)
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object  : DisposableSingleObserver<Asset>() {
+                .subscribeWith(object  : DisposableSingleObserver<Document>() {
 
                     override fun onError(e: Throwable?) {
                         onsuccess.value=false
+                        Log.i("no se creo por este motivo",e.toString())
 
                     }
-
-                    override fun onSuccess(t: Asset?) {
+                    override fun onSuccess(t: Document?) {
                         onsuccess.value=true
-                        Log.i("este es el articulo",t.toString())
+                        Log.i("se creo ",t.toString())
                     }
                 }))
-
-
-    }*/
+    }
     private val documentLiveData= MutableLiveData<List<Document>>()
 
     fun verData(idUser:String){
@@ -63,5 +64,5 @@ constructor(
 
     fun getDocumentLiveData(): LiveData<List<Document>> = documentLiveData
 
-    fun getOncreatedAssetData(): LiveData<Boolean> = onsuccess
+    fun getOncreatedDocumentData(): LiveData<Boolean> = onsuccess
 }

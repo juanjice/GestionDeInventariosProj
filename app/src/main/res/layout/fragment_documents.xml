@@ -7,11 +7,11 @@
     tools:context=".documents.fragment.DocumentsFragment">
 
     <TextView
-        android:id="@+id/text_view_frag_asset"
+        android:id="@+id/text_view_frag_document"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_normal"
-        android:text="@string/asset_tittle"
+        android:text="@string/docuemnt_tittle_fragment"
         android:textColor="@color/black"
         android:textSize="@dimen/tittle_text_size"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/margin_normal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_view_frag_asset"
+        app:layout_constraintTop_toBottomOf="@id/text_view_frag_document"
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="0dp"
         tools:listitem="@layout/list_item_document" />

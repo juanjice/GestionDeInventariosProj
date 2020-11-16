@@ -37,6 +37,7 @@ constructor(
                 }))
     }
     private val createExistLiveData= MutableLiveData<User>()
+
     fun createUserIfNoExist(name:String,email: String,password: String){
         compositeDisposable.add(
             createUserUseCase.execute(name,email,password)
