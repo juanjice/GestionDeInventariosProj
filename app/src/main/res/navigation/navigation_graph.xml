@@ -29,6 +29,10 @@
             app:nullable="false"/>
     </action>
 
+    <action
+        android:id="@+id/action_home_to_login"
+        app:destination="@id/login" />
+
 </fragment>
     <fragment
         android:id="@+id/assets"
