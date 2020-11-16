@@ -12,6 +12,7 @@ interface AssetApiService {
     fun getAllAssets(
         @Query("idUser") isUser:String
     ): Call<List<AssetApiEntity>>
+
     @Headers("Content-Type: application/json")
     @POST("assets")
     fun createOneAsset(@Body

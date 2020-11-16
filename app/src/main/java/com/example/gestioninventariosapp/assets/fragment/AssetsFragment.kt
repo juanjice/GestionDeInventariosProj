@@ -11,17 +11,14 @@ import androidx.recyclerview.widget.LinearLayoutManager.VERTICAL
 import com.example.gestioninventariosapp.R
 import com.example.gestioninventariosapp.assets.items.AssetsItem
 import com.example.gestioninventariosapp.assets.viewmodel.AssetsViewModel
-import com.example.gestioninventariosapp.ui.fragments.HomeFragment
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import dagger.android.support.DaggerFragment
-import kotlinx.android.synthetic.main.fragment_add_item.*
 import kotlinx.android.synthetic.main.fragment_assets.*
 import javax.inject.Inject
 
 class AssetsFragment : DaggerFragment() {
 
-    @Inject lateinit var testString: String
     @Inject lateinit var viewModel: AssetsViewModel
 
     val assetsAdapter= GroupAdapter<GroupieViewHolder>()

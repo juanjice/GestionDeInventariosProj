@@ -45,10 +45,7 @@ class HomeFragment : Fragment() {
         input_assetButton.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_addItem, args)
         }
-        output_assetButton.setOnClickListener {
 
-            findNavController().navigate(R.id.action_home_to_RemoveItem)
-        }
 
     }
 

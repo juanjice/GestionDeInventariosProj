@@ -1,7 +1,8 @@
 package com.example.gestioninventariosapp.assets.items
 
 
-import android.content.DialogInterface
+
+import androidx.navigation.findNavController
 import com.example.domain.asset.model.Asset
 import com.example.gestioninventariosapp.R
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
@@ -15,8 +16,9 @@ class AssetsItem(val asset: Asset): Item() {
            textViewTittleAsset.text=asset.name
            textViewDescAssets.text=asset.descripcion
            textViewTotalAssets.text=asset.cantidad.toString()
-           setOnClickListener {
-               //TODO Add action
+           textViewTypeAsset.text=asset.tipo.toString()
+           output_asset_button.setOnClickListener{
+               findNavController().navigate(R.id.action_assets_to_documents)
            }
        }
     }
